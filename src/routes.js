@@ -19,13 +19,13 @@ const Stack = createStackNavigator();
 export default function Routes() {
   
   const screenOptions = {
-    headerTintColor: '#ffffff',
+    headerTintColor: '#000000',
     headerTitleAlign: 'center',
     headerStyle: {
-      backgroundColor: '#03dd55',
+      backgroundColor: '#80ed99',
     },
     headerTitleStyle: {
-      color: '#fff',
+      color: '#000',
       fontWeight: 'bold',
     },
   };

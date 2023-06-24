@@ -53,7 +53,7 @@ export default function ComprarTitulo() {
                 <LineChart
                     style={{ flex: 1, marginLeft: 16 }}
                     data={data}
-                    svg={{ stroke: 'rgb(134, 65, 244)' }}
+                    svg={{ stroke: 'rgb(0, 255, 255)' }}
                     contentInset={contentInset}
                 >
                     <Grid />
@@ -62,17 +62,17 @@ export default function ComprarTitulo() {
         <View style={styles.barra}/>
         <View>
             <Text style={styles.label}>Ticker</Text>
-            <TextInput style={styles.input}/>
+            <TextInput style={styles.input} placeholder='ABCD4'/>
             <Text style={styles.label}>Corretora</Text>
             <TextInput style={styles.input}/>
             <Text style={styles.label}>Data</Text>
-            <TextInput style={styles.input} keyboardType='numeric'/>
+            <TextInput style={styles.input} placeholder='01/01/2023' keyboardType='numeric'/>
             <View style={styles.linha}>
-                <View style={{width:'50%'}}>
+                <View style={{width:'40%'}}>
                     <Text style={styles.label}>Preço</Text>
                     <TextInput style={styles.input} keyboardType='numeric'/>
                 </View>
-                <View style={{width:'50%'}}>
+                <View style={{width:'40%'}}>
                     <Text style={styles.label}>Quantidade</Text>
                     <TextInput style={styles.input} keyboardType='numeric'/>
                 </View>
@@ -102,9 +102,9 @@ const styles = StyleSheet.create({
     },
     input: {
       borderWidth: 1,
-      borderColor: colors.borda,
-      color:'#fff',
-      backgroundColor: '#000',
+      borderColor: colors.bordaTextInput,
+      color: colors.textoInput,
+      backgroundColor: colors.fundoTextInput,
       borderRadius: 5,
       padding: 5,
       marginVertical: 0,
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         width: '80%',
         marginTop: 10,
         marginBottom: 10,
-        borderColor:'white',
+        borderColor: colors.borda,
         borderWidth:1
     },
     espaco:{
@@ -139,13 +139,13 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     botaoAtivo:{
-        backgroundColor: '#003399',
+        backgroundColor: colors.fundoBotaoAtivo,
         borderRadius: 5,
         margin: 10,
         padding: 5,
     },
     textBotaoAtivo:{
-        color: '#ffffff',
+        color: colors.textoBotaoAtivo,
         fontSize: 20,
         margin: 0,
         padding: 0,
@@ -154,8 +154,8 @@ const styles = StyleSheet.create({
 
     },
     textbotaoInativo:{
-        backgroundColor: '#222222',
-        color: '#444444',
+        backgroundColor: colors.fundoBotaoInativo,
+        color: colors.textoBotaoInativo,
         fontSize:20,
         margin: 10,
         padding: 5,
@@ -164,7 +164,8 @@ const styles = StyleSheet.create({
     },
     linha: {
         flexDirection: 'row',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        alignSelf: 'center'
       }
   });
 

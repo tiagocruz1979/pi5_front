@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import colors from './colors';
 const Card = ({ tipo, totalVenda, lucro_Prejuizo, imposto}) => {
 
   return (
@@ -27,7 +27,7 @@ const Card = ({ tipo, totalVenda, lucro_Prejuizo, imposto}) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#aaaaaa',
+    backgroundColor: colors.fundoCard,
     borderRadius: 8,
     padding: 5,
     margin: 2,
@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
     color: '#000',
     marginLeft: 5,
     fontSize: 12,
-    borderColor: '#fff',
+    borderColor: colors.borda,
     justifyContent: 'flex-start'
   },
   titulo: {
-    color: '#000',
+    color: colors.textCard,
     marginLeft: 5,
     fontSize: 16,
     borderColor: '#fff',
@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
   },
     resp: {
     fontSize: 14,
-    color: '#eee',
+    color: colors.textCard,
     fontWeight: 'bold',
     justifyContent: 'flex-start',
-    borderColor: '#222',
+    borderColor: colors.borda,
     borderWidth: 1,
     marginLeft:5,
     marginRight: 5,

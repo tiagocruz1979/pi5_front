@@ -40,16 +40,16 @@ export default function ComprarTitulo() {
 
     <View style={{justifyContent:'flex-start'}}>
       <Text style={styles.label}>Ticker</Text>
-        <TextInput style={styles.input}></TextInput>
+        <TextInput style={styles.input} placeholder='ABCD4'></TextInput>
       </View>
       <View style={styles.linha}>
         <View style={{width:'40%'}}>  
           <Text style={styles.label}>Tipo</Text>
-          <TextInput style={styles.input}></TextInput>
+          <TextInput style={styles.input} placeholder='Dividendos'></TextInput>
         </View>
         <View style={{width:'40%'}}>
           <Text style={styles.label}>Data Pag.</Text>
-          <TextInput style={styles.input}></TextInput>
+          <TextInput style={styles.input} keyboardType='numeric'></TextInput>
         </View>    
       </View>
       <View style={styles.linha}>
@@ -78,8 +78,7 @@ export default function ComprarTitulo() {
           <TextInput style={styles.input}></TextInput>
         </View>
       </View>      
-
-      <TouchableOpacity style={styles.button} padding={100} onPress={cadastrar}>
+      <TouchableOpacity style={styles.button} onPress={cadastrar}>
         <Text style={styles.buttonText}>Registrar</Text>
       </TouchableOpacity>
 
@@ -90,7 +89,7 @@ export default function ComprarTitulo() {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#000000',
+      backgroundColor: colors.background,
       flex: 1,
     }, 
 
@@ -104,9 +103,9 @@ const styles = StyleSheet.create({
     },
     input: {
       borderWidth: 1,
-      borderColor: colors.borda,
-      color:'#fff',
-      backgroundColor: '#000',
+      borderColor: colors.bordaTextInput,
+      color: colors.textoInput,
+      backgroundColor: colors.fundoTextInput,
       borderRadius: 5,
       padding: 5,
       marginVertical: 0,
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
         width: '80%',
         marginTop: 10,
         marginBottom: 10,
-        borderColor:'white',
+        borderColor: colors.borda,
         borderWidth:1
     },
     espaco:{
@@ -141,13 +140,13 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     botaoAtivo:{
-        backgroundColor: '#003399',
+        backgroundColor: colors.fundoBotaoAtivo,
         borderRadius: 5,
         margin: 10,
         padding: 5,
     },
     textBotaoAtivo:{
-        color: '#ffffff',
+        color: colors.textoBotaoAtivo,
         fontSize: 20,
         margin: 0,
         padding: 0,
@@ -156,8 +155,8 @@ const styles = StyleSheet.create({
 
     },
     textbotaoInativo:{
-        backgroundColor: '#222222',
-        color: '#444444',
+        backgroundColor: colors.fundoBotaoInativo,
+        color: colors.textoBotaoInativo,
         fontSize:20,
         margin: 10,
         padding: 5,
@@ -167,6 +166,7 @@ const styles = StyleSheet.create({
     linha: {
       flexDirection: 'row',
       justifyContent: 'flex-start',
+      alignSelf: 'center'
     }
   });
 

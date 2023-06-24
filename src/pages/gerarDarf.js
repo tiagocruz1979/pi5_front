@@ -5,7 +5,7 @@ import {StyleSheet, ScrollView,View,Text,List,Form,SubmitButton} from 'react-nat
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import BarraNavegacao from './barraNavegacao';
 import { useNavigation } from '@react-navigation/native';
-
+import colors from './colors';
 export default function MeusAtivos() {
 
     const [lista, setLista] = useState([
@@ -31,7 +31,7 @@ export default function MeusAtivos() {
               <Text style={styles.textbotaoInativo}>Gerar DARF</Text>
             </View>
         
-            <ScrollView style={{backgroundColor: '#222'}}>
+            <ScrollView style={{backgroundColor: colors.backgroundColor}}>
                 <View style={styles.cardContainer}>
                 {lista.map(item => <Card 
                 tipo={item.tipo} 
@@ -57,13 +57,13 @@ export default function MeusAtivos() {
           flexWrap: 'wrap',
         },
         botaoAtivo:{
-          backgroundColor: '#003399',
+          backgroundColor: colors.fundoBotaoAtivo,
           borderRadius: 5,
           margin: 10,
           padding: 5,
       },
       textBotaoAtivo:{
-          color: '#ffffff',
+          color: colors.textoBotaoAtivo,
           fontSize: 20,
           margin: 0,
           padding: 0,
@@ -72,8 +72,8 @@ export default function MeusAtivos() {
   
       },
       textbotaoInativo:{
-          backgroundColor: '#222222',
-          color: '#444444',
+          backgroundColor: colors.fundoBotaoInativo,
+          color: colors.textoBotaoInativo,
           fontSize:20,
           margin: 10,
           padding: 5,

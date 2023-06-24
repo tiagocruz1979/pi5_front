@@ -56,7 +56,7 @@ export default function RelatorioIR()
 
 const styles = StyleSheet.create({
   topo:{
-    backgroundColor:'#333',
+    backgroundColor:colors.background,
     height:'12%',
     paddingTop: 5,
     paddingLeft: 20,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex:1,
-    backgroundColor: '#000',
+    backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: colors.borda,
-    color:'#fff',
-    backgroundColor: '#000',
+    color:colors.textoInput,
+    backgroundColor: colors.fundoTextInput,
     borderRadius: 2,
     padding: 2,
     marginVertical: 0,
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
       width: '80%',
       marginTop: 10,
       marginBottom: 10,
-      borderColor:'white',
+      borderColor:colors.borda,
       borderWidth:1
   },
   espaco:{
@@ -117,13 +117,13 @@ const styles = StyleSheet.create({
       marginBottom: 10
   },
   botaoAtivo:{
-    backgroundColor: '#003399',
+    backgroundColor: colors.fundoBotaoAtivo,
     borderRadius: 5,
     margin: 10,
     padding: 5,
 },
 textBotaoAtivo:{
-    color: '#ffffff',
+    color: colors.textoBotaoAtivo,
     fontSize: 20,
     margin: 0,
     padding: 0,
@@ -132,8 +132,8 @@ textBotaoAtivo:{
 
 },
 textbotaoInativo:{
-    backgroundColor: '#222222',
-    color: '#444444',
+    backgroundColor: colors.fundoBotaoInativo,
+    color: colors.textoBotaoInativo,
     fontSize:20,
     margin: 10,
     padding: 5,

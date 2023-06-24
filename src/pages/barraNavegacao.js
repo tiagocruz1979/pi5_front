@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
     fontWeight: 'bold',
+    alignSelf: 'center'
   },
 
   valor: {
@@ -88,7 +89,9 @@ const styles = StyleSheet.create({
   icon: {
     fontSize: 40,
     color: '#999',
-  }
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
 });
 
 export default BarraNavegacao;

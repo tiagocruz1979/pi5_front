@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: colors.borderColor,
-    backgroundColor: colors.textFundo,
+    borderColor: colors.bordaTextInput,
+    backgroundColor: colors.fundoTextInput,
     borderRadius: 5,
     padding: 10,
     marginVertical: 10,

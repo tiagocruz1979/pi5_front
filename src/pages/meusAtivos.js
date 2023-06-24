@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import BarraTotal from './barraTotal.js';
 import BarraNavegacao from './barraNavegacao';
 import { useNavigation } from '@react-navigation/native';
+import colors from './colors';
 
 
 function calcularValorTotal(lista) {
@@ -46,7 +47,7 @@ export default function MeusAtivos() {
                 lucroPrejuizo={1000}
             />
         
-            <ScrollView style={{backgroundColor: '#222'}}>
+            <ScrollView style={{backgroundColor: colors.background}}>
                 <View style={styles.cardContainer}>
                 {lista.map(item => <Card 
                 tipo={item.tipo} 

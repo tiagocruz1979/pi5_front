@@ -22,7 +22,7 @@ export default function CadastrarTitulo() {
 
 
   return (
-      <View style={{flex : 1 , backgroundColor:'black'}}>
+      <View style={{flex : 1 , backgroundColor:colors.background}}>
         <View style={styles.barra}/>
         <View style={{marginTop:60}}>
             <Text style={styles.label}>Ticker</Text>

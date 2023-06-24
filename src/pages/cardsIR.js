@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import colors from './colors';
 const Card = ({ ticker, tipo, empresa, cnpj, segmento}) => {
     //const valorTotal = (quantidadeAcoes * precoAtual).toFixed(2);
 
@@ -41,7 +41,7 @@ const Card = ({ ticker, tipo, empresa, cnpj, segmento}) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#55aacc',
+    backgroundColor: colors.fundoCard,
     borderRadius: 8,
     padding: 5,
     margin: 2,
@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     color: '#000',
     marginLeft: 5,
     fontSize: 12,
-    borderColor: '#fff',
+    borderColor: colors.textCard,
     justifyContent: 'flex-start'
   },
   resp: {
     fontSize: 14,
-    color: '#eee',
+    color: colors.textCard,
     fontWeight: 'bold',
     justifyContent: 'flex-start',
     borderColor: '#222',
